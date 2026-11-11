@@ -64,5 +64,6 @@ def cancel_order(order_id: str):
     conn.execute(query)
     conn.commit()
     #dummy code added to repo
+    print("This is to test the pr_agent")
 
     return {"message": "Order cancelled"}
