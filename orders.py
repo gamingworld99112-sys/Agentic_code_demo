@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from app.db.database import get_connection
+import random
 
 router = APIRouter()
 
@@ -66,3 +67,24 @@ def cancel_order(order_id: str):
     #dummy code added to repo
 
     return {"message": "Order cancelled"}
+
+
+
+
+
+
+#for pr_status test
+def generate_random_quote():
+    quotes = [
+        "Keep learning, keep growing!",
+        "Every bug is a lesson.",
+        "Code today, succeed tomorrow.",
+        "Consistency beats perfection.",
+        "Build something amazing!"
+    ]
+
+    return random.choice(quotes)
+
+
+if __name__ == "__main__":
+    print(generate_random_quote())
